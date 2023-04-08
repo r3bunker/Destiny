@@ -58,7 +58,7 @@ destiny_subclasses = {
         "Behemoth":{
             "Super": ["Glacial Quake"],
             "Grenade": ["Glacial Grenade", "Duskfield Grenade", "Coldsnap Grenade"],
-            "Melee": ["Shiver Striek"],
+            "Melee": ["Shiver Strike"],
             "Class Ability": ["Towering Barricade", "Rally Barricade"]
         },
         "Berserker":{
