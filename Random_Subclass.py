@@ -110,9 +110,9 @@ if "visibility" not in st.session_state:
 
 st.title("Random Subclass Generator")
 choice = st.selectbox("Which Class?",
-            ('Warlock','Titan','Hunter'),
-            label_visibility=st.session_state.visibility,
-            disabled=st.session_state.disabled,)
+            ('Warlock','Titan','Hunter'))
+            # label_visibility=st.session_state.visibility,
+            # disabled=st.session_state.disabled,)
 
 col1, col2, col3 = st.columns(3)
 default = True
