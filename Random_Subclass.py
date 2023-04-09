@@ -17,7 +17,7 @@ destiny_subclasses = {
             "Class Ability": ["Healing Rift", "Empowering Rift"]
         },
         "Voidwalker": {
-            "Super": ["Vortex", "Cataclysm", "Nova Warp"],
+            "Super": ["Vortex Novabomb", "Cataclysm Novabomb", "Nova Warp"],
             "Grenade":  ["Spike Grenade", "Vortex Grenade", "Voidwall Grenade", "Magnetic Grenade", "Suppressor Grenade", "Axion Bolt"],
             "Melee": ["Pocket Singularity"],
             "Class Ability": ["Healing Rift", "Empowering Rift"]
@@ -128,6 +128,7 @@ if st.button('Randomize'):
     subclass_abilities = []
     class_selected = destiny_subclasses[str(choice)]
     subclass = random.choice(list(class_selected.keys()))
+    super = random.choice(class_selected[subclass]['Super'])
     if grenade_box:
         grenade = random.choice(class_selected[subclass]['Grenade'])
         subclass_abilities.append(grenade)
@@ -159,7 +160,7 @@ if st.button('Randomize'):
         'Threadrunner': 'images/hunter/Threadrunner.png'
     }
     # print(class_selected.keys())
-    st.subheader(f"{subclass} | {' | '.join(subclass_abilities)}")
+    st.subheader(f"{subclass} | {super} | {' | '.join(subclass_abilities)}")
     if subclass in subclass_images:
         image_path = subclass_images[subclass]
         image = Image.open(image_path)
